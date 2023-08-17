@@ -22,6 +22,11 @@ public class MainController {
 //    @Autowired
 //    private UsersTasksRepository usersTasksRepository;
 
+    @GetMapping(path = "/test")
+    public @ResponseBody String checkDeploy() {
+        return "Hola desde el servidor en AWS";
+    }
+
     @PostMapping(path = "/user")
     public @ResponseBody String addNewUser(
             @RequestParam String name,
